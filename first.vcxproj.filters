@@ -21,6 +21,9 @@
     <ClCompile Include="hw2_d.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="hw2_b.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="hw2_c.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
