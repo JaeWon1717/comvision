@@ -48,7 +48,6 @@ int main()
             dst.at<uchar>(x, y) = sum;
         }
     }
-    //namedWindow(Reconstructed, WINDOW_NORMAL);
     imshow("Reconstructed", dst);
     waitKey(0);
 
