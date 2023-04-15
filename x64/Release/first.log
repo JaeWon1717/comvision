@@ -5,8 +5,7 @@ C:\opencv\build\include\opencv2\core.hpp(1747,1): warning C4819: 현재 코드 �
 C:\opencv\build\include\opencv2\objdetect\aruco_board.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
 C:\Users\20map\source\repos\first\first\Dissolve.cpp(12,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
   코드를 생성하고 있습니다.
-  69 of 72 functions (95.8%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 72 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   코드를 생성했습니다.
   first.vcxproj -> C:\Users\20map\source\repos\first\x64\Release\first.exe
