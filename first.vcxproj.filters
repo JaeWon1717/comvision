@@ -36,7 +36,7 @@
     <ClCompile Include="adaptiveThreshold.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="labeling.cpp">
+    <ClCompile Include="hw6.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="calBackProject.cpp">
@@ -63,7 +63,10 @@
     <ClCompile Include="TEST.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Dissolve.cpp">
+    <ClCompile Include="hw4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="hw5.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

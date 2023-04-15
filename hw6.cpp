@@ -10,9 +10,9 @@ using namespace std;
 
 
 int main() {
-	Mat img_gray, img_color, img_binary;
-
-	img_gray = imread("../image/logo.jpg", IMREAD_GRAYSCALE);
+	Mat img_gray, img_color, img_binary,img;
+	img= imread("C:/my_images/logo.jpg");
+	img_gray = imread("C:/my_images/logo.jpg", IMREAD_GRAYSCALE);
 
 	//adaptiveThreshold(img_gray, img_binary, 255,ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 15, 5);
 	threshold(img_gray, img_binary, 0, 255, THRESH_BINARY | THRESH_OTSU);
@@ -37,7 +37,7 @@ int main() {
 
 			if (label[x] == 1) {
 				pixel[x][0] = 0;
-				pixel[x][1] = 255;
+				pixel[x][1] = 30; //±âº»°ª 255
 				pixel[x][2] = 0;
 			}
 		}
@@ -63,7 +63,7 @@ int main() {
 		putText(img_color, to_string(j), Point(left + 10, top + 10),
 			FONT_HERSHEY_SIMPLEX, 1, Scalar(255, 0, 0), 2);
 	}
-
+	imshow("originalimage", img);
 	imshow("labeled image", img_color);
 	waitKey(0);
 }
