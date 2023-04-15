@@ -60,5 +60,11 @@
     <ClCompile Include="Subtract.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="TEST.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Dissolve.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
