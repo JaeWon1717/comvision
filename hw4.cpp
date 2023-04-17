@@ -14,27 +14,33 @@ void main() {
 	Mat image2 = imread("C:/my_images/Fig0228(b)(angiography_live_ image).tif", IMREAD_GRAYSCALE);
 	CV_Assert(!(image1.empty() || image2.empty()));
 
+	// XOR 연산 수행
 	double alpha = 0.5, beta = 10;
 	Mat xor_img;
 	bitwise_xor(image1, image2, xor_img); //XOR
+	// 차이 이미지 생성 (DIFF)
 	Mat diff_img;//DIFF
 	absdiff(image1, image2, diff_img);
 	
+	// AND 연산 수행
 	Mat AND;//AND 
 	bitwise_and(image1, image2, AND);
 	Mat OR;//OR
 	bitwise_or(image1, image2, OR);
 
+	// 더하기 연산 (ADD)
 	Mat add_img1 = image1 + image2;
 	Mat add_img2 = image1 * 0.5 + image2 * 0.5;
 	Mat add_img3 = image1 * alpha + image2 * (1 - alpha);
 	Mat sub_img = abs(image2  *alpha - image1 *(1-alpha));
+	// 히스토그램 평활화 수행
 	Mat histEqA, histEqB;
 	equalizeHist(image1, histEqA);
 	equalizeHist(image2, histEqB);
-
+	// 이미지 차이 연산 수행 후 반전
 	Mat diff = abs(image1 - image2);
 	diff = 255 - diff;
+	// 두 이미지의 히스토그램 차이 연산 수행
 	absdiff(histEqA, histEqB, diff);
 
 

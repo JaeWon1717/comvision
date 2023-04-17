@@ -13,6 +13,7 @@ char print(int i) {
 int main()
 {
     Mat m1 = imread("C:/my_images/Fig0314(a)(100-dollars).tif", IMREAD_GRAYSCALE);
+    resize(m1, m1, Size(), 0.5, 0.5); // 이미지 크기 1/4로 축소
     imshow("Original", m1);
     int cols, rows, x, y;
     cols = m1.cols;
@@ -33,6 +34,7 @@ int main()
         string s = "dstImage";
         s += print(i);
         namedWindow(s, WINDOW_NORMAL);
+        resizeWindow(s, cols / 2, rows / 2); // 윈도우 크기 1/4로 축소
         imshow(s, out[i]);
     }
 
