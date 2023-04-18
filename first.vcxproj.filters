@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hw1.cpp">
+    <ClCompile Include="hw2-1 Power Law Trasformation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="hw2_d.cpp">
@@ -24,10 +24,10 @@
     <ClCompile Include="hw2_b.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hw2all.cpp">
+    <ClCompile Include="hw2-2 piecewise-linear.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hw3.cpp">
+    <ClCompile Include="hw2-3 Bit Plane Slicing.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="threshold.cpp">
@@ -36,7 +36,7 @@
     <ClCompile Include="adaptiveThreshold.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hw6.cpp">
+    <ClCompile Include="hw2-6 Connected compoenet.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="calBackProject.cpp">
@@ -63,10 +63,10 @@
     <ClCompile Include="TEST.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hw4.cpp">
+    <ClCompile Include="hw2-4 Subtraction.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hw5.cpp">
+    <ClCompile Include="hw2-5 Logic Operation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
