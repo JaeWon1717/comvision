@@ -18,7 +18,9 @@ int main() {
 	Mat img_gray, img_color, img_binary,img;
 	img= imread("C:/my_images/logo.jpg");
 	img_gray = imread("C:/my_images/logo.jpg", IMREAD_GRAYSCALE);
+	CV_Assert(!(image1.empty() || image2.empty()));
 
+	double alpha = 0.5, beta = 10;
 	//adaptiveThreshold(img_gray, img_binary, 255,ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 15, 5);
 	threshold(img_gray, img_binary, 0, 255, THRESH_BINARY | THRESH_OTSU);
 
