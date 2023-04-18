@@ -20,7 +20,7 @@ int main() {
 	img_gray = imread("C:/my_images/logo.jpg", IMREAD_GRAYSCALE);
 	CV_Assert(!(image1.empty() || image2.empty()));
 
-	double alpha = 0.5, beta = 10;
+	double alpha = 0.5, beta = 5;
 	//adaptiveThreshold(img_gray, img_binary, 255,ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 15, 5);
 	threshold(img_gray, img_binary, 0, 255, THRESH_BINARY | THRESH_OTSU);
 
