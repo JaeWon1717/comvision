@@ -69,5 +69,8 @@
     <ClCompile Include="hw2-5 Logic Operation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="negative.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
