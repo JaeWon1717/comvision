@@ -46,11 +46,15 @@ int main()
     Laplacian(srcImage, laplacianImage, CV_16S);
     convertScaleAbs(laplacianImage, laplacianImage);
     imshow("laplacianImage", laplacianImage);
+<<<<<<< HEAD
     /*
      if ((center > 0 && top < 0) || (center > 0 && bottom < 0) ||
                 (center > 0 && left < 0) || (center > 0 && right < 0) ||
                 (center < 0 && top > 0) || (center < 0 && bottom > 0) ||
                 (center < 0 && left > 0) || (center < 0 && right > 0))*/ //log연산 필요시 추가 
+=======
+
+>>>>>>> 18b0b3d4c1ae335d2756eefeba6a59816c007e2b
     waitKey();
     return 0;
 }
