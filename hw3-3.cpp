@@ -71,7 +71,7 @@ int main() {
 
     // Gaussian smoothing filter
     GaussianBlur(image, filtered_image, Size(3, 3), 1);
-    imshow("Gaussian Filter", filtered_image);
+    imshow("Gaussian-smoothing Filter", filtered_image);
 
     // Median filter
     medianBlur(image, filtered_image, 3);
