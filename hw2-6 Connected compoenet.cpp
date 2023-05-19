@@ -17,7 +17,7 @@ using namespace std;
 int main() {
 	Mat img_gray, img_color, img_binary,img;
 	img= imread("C:/my_images/logo.jpg");
-	img_gray = imread("C:/my_images/logo.jpg", IMREAD_GRAYSCALE);
+	img_gray = imread("C:/my_images/Fig0911(a)(noisy_fingerprint)", IMREAD_GRAYSCALE);
 	CV_Assert(!(image1.empty() || image2.empty()));
 
 	double alpha = 0.5, beta = 5;
