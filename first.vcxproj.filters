@@ -114,5 +114,14 @@
     <ClCompile Include="hw5-4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DEF_complex.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="translation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LOG_DFT.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
