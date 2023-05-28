@@ -123,5 +123,26 @@
     <ClCompile Include="LOG_DFT.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1) IdealLowPassFilter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2) ButterworthLowPassFilter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3) GaussianLowPassFilter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4) IdealHighPassFilter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5) ButterworthHighpassFilter .cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="6) GaussianHighPassFilter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="7) moire_GaussianBandRejectFiltering, IdealBandRejectFilteringH.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
