@@ -61,7 +61,7 @@ int main()
 
         //  line(dstImage,Point(400/2, 100/2),Point(100/2, 400/2), Scalar(0, 255, 0), 2);
 
-    rectangle(dstImage, Point(400 / 2, 100 / 2), Point(100 / 2, 400 / 2), Scalar(255, 0, 0));
+    rectangle(dstImage, Point(200 / 2, 100 / 2), Point(200 / 2, 400 / 2), Scalar(255, 0, 0));
     imshow("dstImage", dstImage);
     waitKey();
     return 0;
