@@ -43,7 +43,7 @@ void ButterworthHighpassFilteringH(Mat F, double D0, int n);
 
 int main()
 {
-	Mat srcImage = imread("lena.jpg", IMREAD_GRAYSCALE);
+	Mat srcImage = imread("C:/my_images/blur.png", IMREAD_GRAYSCALE);
 	if (srcImage.empty())
 		return -1;
 

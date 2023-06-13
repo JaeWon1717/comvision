@@ -9,10 +9,9 @@ void GaussianBandRejectFilteringH(Mat F, double D0, double W);
 void IdealLowpassFilteringH(Mat F, double D0);
 void IdealBandRejectFilteringH(Mat F, double D0, double W);
 
-
 int main()
 {
-	Mat srcImage = imread("Fig0516.tif", IMREAD_GRAYSCALE);
+	Mat srcImage = imread("C:/my_images/moire.jpg", IMREAD_GRAYSCALE);
 	if (srcImage.empty())
 		return -1;
 	imshow("srcImage", srcImage);
@@ -24,26 +23,37 @@ int main()
 	Mat dftA;
 	dft(fImage, dftA, DFT_COMPLEX_OUTPUT);
 
-	double	D0 = 40;
+	double D0 = 40;
 	double W = 10;
-	GaussianLowpassFilteringH(dftA, D0);
-	//GaussianBandRejectFilteringH(dftA, D0, W);
-	//IdealLowpassFilteringH(dftA, D0);
-	//IdealBandRejectFilteringH(dftA, D0, W);
 
-	Mat dftB;
-	dft(dftA, dftB, DFT_INVERSE | DFT_SCALE | DFT_REAL_OUTPUT);
-	ChangeSignOddPositionInXY(dftB);
+	// Gaussian Band Reject Filtering
+	Mat dftAGaussian = dftA.clone();
+	GaussianBandRejectFilteringH(dftAGaussian, D0, W);
 
-	Mat dstImage;
-	dftB.convertTo(dstImage, CV_8U);
-	imshow("dstImage", dstImage);
+	// Ideal Band Reject Filtering
+	Mat dftAIdeal = dftA.clone();
+	IdealBandRejectFilteringH(dftAIdeal, D0, W);
 
+	// Inverse DFT for Gaussian Band Reject Filtering
+	Mat dftBGaussian;
+	dft(dftAGaussian, dftBGaussian, DFT_INVERSE | DFT_SCALE | DFT_REAL_OUTPUT);
+	ChangeSignOddPositionInXY(dftBGaussian);
+
+	// Inverse DFT for Ideal Band Reject Filtering
+	Mat dftBIdeal;
+	dft(dftAIdeal, dftBIdeal, DFT_INVERSE | DFT_SCALE | DFT_REAL_OUTPUT);
+	ChangeSignOddPositionInXY(dftBIdeal);
+
+	Mat dstImageGaussian, dstImageIdeal;
+	dftBGaussian.convertTo(dstImageGaussian, CV_8U);
+	dftBIdeal.convertTo(dstImageIdeal, CV_8U);
+
+	imshow("GaussianBandRejectFilteringH", dstImageGaussian);
+	imshow("IdealBandRejectFilteringH", dstImageIdeal);
 
 	waitKey();
 	return 0;
 }
-
 
 void IdealLowpassFilteringH(Mat F, double D0)
 {
@@ -77,8 +87,8 @@ void IdealBandRejectFilteringH(Mat F, double D0, double W)
 	int u, v;
 	double D; // distance
 	double H;
-	double centerU = F.cols / 2;
-	double centerV = F.rows / 2;
+	double centerU = F.cols / 4;
+	double centerV = F.rows / 4;
 	Vec2f cmplxValue;
 
 	// ideal filter H
@@ -89,7 +99,7 @@ void IdealBandRejectFilteringH(Mat F, double D0, double W)
 			if ((D <= (D0 + W / 2)) && (D >= (D0 - W / 2)))
 				H = 0.0;
 			else
-				H = 1.0;
+				H = 2.0;
 			cmplxValue = F.at<Vec2f>(v, u);
 
 			cmplxValue.val[0] *= H;
@@ -129,8 +139,8 @@ void GaussianBandRejectFilteringH(Mat F, double D0, double W)
 
 	double D; // distance
 	double H;
-	double centerU = F.cols / 2;
-	double centerV = F.rows / 2;
+	double centerU = F.cols / 4;
+	double centerV = F.rows / 4;
 	Vec2f cmplxValue;
 
 	// filter H
@@ -140,7 +150,7 @@ void GaussianBandRejectFilteringH(Mat F, double D0, double W)
 			D = sqrt((u - centerU) * (u - centerU) + (v - centerV) * (v - centerV));
 			D2 = D * D - D0 * D0;
 			DW = D2 / (D * W);
-			H = 1.0 - exp(-(DW * DW));
+			H = 2.0 - exp(-(DW * DW));
 			cmplxValue = F.at<Vec2f>(v, u);
 			cmplxValue.val[0] *= H;
 			cmplxValue.val[1] *= H;
