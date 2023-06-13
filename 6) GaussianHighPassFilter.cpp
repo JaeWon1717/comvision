@@ -43,7 +43,7 @@ void GaussianHighpassFilteringH(Mat F, double D0);
 
 int main()
 {
-	Mat srcImage = imread("lena.jpg", IMREAD_GRAYSCALE);
+	Mat srcImage = imread("C:/my_images/blur.png", IMREAD_GRAYSCALE);
 	if (srcImage.empty())
 		return -1;
 
@@ -54,7 +54,7 @@ int main()
 	Mat dftA;
 	dft(fImage, dftA, DFT_COMPLEX_OUTPUT);
 
-	double D0 = 5.0; // 30, 80, 200
+	double D0 = 20.0; // 30, 80, 200
 	GaussianHighpassFilteringH(dftA, D0);
 
 	Mat dftB;

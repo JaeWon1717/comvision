@@ -144,5 +144,22 @@
     <ClCompile Include="7) moire_GaussianBandRejectFiltering, IdealBandRejectFilteringH.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="wiringPi.h">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="softServo.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="rcservo.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="makefile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="softServo.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
