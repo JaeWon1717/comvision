@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-	Mat_<uchar> m1(3, 5);
+	Mat_<uchar> m1(10, 10);
 	m1 << 21, 15, 10, 9, 14,                   // Mat_ 행렬 초기화
 		6, 10, 15, 9, 7,
 		7, 12, 8, 14, 1;
