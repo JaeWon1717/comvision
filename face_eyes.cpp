@@ -70,7 +70,7 @@ void FaceAndEyeDetect(Mat img)
 		vector<Rect> eye_pos;                   // 검출한 눈 영역을 저장하는 Rect 형의 vector   
 		Mat roi = gray(face_pos[i]);            // 얼굴 영역을 ROI로 지정
 
-		eye.detectMultiScale(roi, eye_pos, 1.1, 2, 0, Size(10, 10));    // 눈 검출 수행
+		eye.detectMultiScale(roi, eye_pos, 1.1, 2, 0, Size(20, 20));    // 눈 검출 수행
 
 		// 검출된 눈의 중심인 center와 반지름radius를 계산한 후 circle() 함수를 이용하여 눈을 그림
 		for (int j = 0; j < eye_pos.size(); j++) {
