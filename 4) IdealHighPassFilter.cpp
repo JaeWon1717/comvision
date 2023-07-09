@@ -86,9 +86,9 @@ void IdealHighpassFilteringH(Mat F, double D0)
 		{
 			D = sqrt((u - centerU) * (u - centerU) + (v - centerV) * (v - centerV));  // 원점에서의 거리 계산
 			if (D >= D0)
-				H = 1.0;
+				H = 2.0;
 			else
-				H = 0.0;
+				H = 1.0;
 
 
 			// 푸리에 변환에 이한 주파수 공간의 값과 필터 H를 곱하여 다시 저장

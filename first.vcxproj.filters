@@ -156,6 +156,18 @@
     <ClCompile Include="makefile.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="imagesearch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="facedetect.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="face_eyes.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="facetrace.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="softServo.h">
